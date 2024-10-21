@@ -1,0 +1,3593 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='listings+' inline='true' name='federated.1slpx7b1xcygv91es9t3n11umt3y' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='listings' name='textscan.0nas9dt0aucmz61cef9e20fbtlzj'>
+            <connection class='textscan' directory='D:/Programing/Data and AI/Data Analytice/Data Analyst Bootcamp for Beginners/Tableau/airbnb Portfolio Project/Old  airbnb DataSet' filename='listings.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[listings.csv].[id]' />
+              <expression op='[calendar.csv].[listing_id]' />
+            </expression>
+          </clause>
+          <relation connection='textscan.0nas9dt0aucmz61cef9e20fbtlzj' name='listings.csv' table='[listings#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+              <column datatype='integer' name='id' ordinal='0' />
+              <column datatype='string' name='listing_url' ordinal='1' />
+              <column datatype='real' name='scrape_id' ordinal='2' />
+              <column datatype='date' name='last_scraped' ordinal='3' />
+              <column datatype='string' name='name' ordinal='4' />
+              <column datatype='string' name='summary' ordinal='5' />
+              <column datatype='string' name='space' ordinal='6' />
+              <column datatype='string' name='description' ordinal='7' />
+              <column datatype='string' name='experiences_offered' ordinal='8' />
+              <column datatype='string' name='neighborhood_overview' ordinal='9' />
+              <column datatype='string' name='notes' ordinal='10' />
+              <column datatype='string' name='transit' ordinal='11' />
+              <column datatype='string' name='thumbnail_url' ordinal='12' />
+              <column datatype='string' name='medium_url' ordinal='13' />
+              <column datatype='string' name='picture_url' ordinal='14' />
+              <column datatype='string' name='xl_picture_url' ordinal='15' />
+              <column datatype='integer' name='host_id' ordinal='16' />
+              <column datatype='string' name='host_url' ordinal='17' />
+              <column datatype='string' name='host_name' ordinal='18' />
+              <column datatype='date' name='host_since' ordinal='19' />
+              <column datatype='string' name='host_location' ordinal='20' />
+              <column datatype='string' name='host_about' ordinal='21' />
+              <column datatype='string' name='host_response_time' ordinal='22' />
+              <column datatype='string' name='host_response_rate' ordinal='23' />
+              <column datatype='string' name='host_acceptance_rate' ordinal='24' />
+              <column datatype='boolean' name='host_is_superhost' ordinal='25' />
+              <column datatype='string' name='host_thumbnail_url' ordinal='26' />
+              <column datatype='string' name='host_picture_url' ordinal='27' />
+              <column datatype='string' name='host_neighbourhood' ordinal='28' />
+              <column datatype='integer' name='host_listings_count' ordinal='29' />
+              <column datatype='integer' name='host_total_listings_count' ordinal='30' />
+              <column datatype='string' name='host_verifications' ordinal='31' />
+              <column datatype='boolean' name='host_has_profile_pic' ordinal='32' />
+              <column datatype='boolean' name='host_identity_verified' ordinal='33' />
+              <column datatype='string' name='street' ordinal='34' />
+              <column datatype='string' name='neighbourhood' ordinal='35' />
+              <column datatype='string' name='neighbourhood_cleansed' ordinal='36' />
+              <column datatype='string' name='neighbourhood_group_cleansed' ordinal='37' />
+              <column datatype='string' name='city' ordinal='38' />
+              <column datatype='string' name='state' ordinal='39' />
+              <column datatype='integer' name='zipcode' ordinal='40' />
+              <column datatype='string' name='market' ordinal='41' />
+              <column datatype='string' name='smart_location' ordinal='42' />
+              <column datatype='string' name='country_code' ordinal='43' />
+              <column datatype='string' name='country' ordinal='44' />
+              <column datatype='real' name='latitude' ordinal='45' />
+              <column datatype='real' name='longitude' ordinal='46' />
+              <column datatype='boolean' name='is_location_exact' ordinal='47' />
+              <column datatype='string' name='property_type' ordinal='48' />
+              <column datatype='string' name='room_type' ordinal='49' />
+              <column datatype='integer' name='accommodates' ordinal='50' />
+              <column datatype='real' name='bathrooms' ordinal='51' />
+              <column datatype='integer' name='bedrooms' ordinal='52' />
+              <column datatype='integer' name='beds' ordinal='53' />
+              <column datatype='string' name='bed_type' ordinal='54' />
+              <column datatype='string' name='amenities' ordinal='55' />
+              <column datatype='integer' name='square_feet' ordinal='56' />
+              <column datatype='real' name='price' ordinal='57' />
+              <column datatype='real' name='weekly_price' ordinal='58' />
+              <column datatype='real' name='monthly_price' ordinal='59' />
+              <column datatype='real' name='security_deposit' ordinal='60' />
+              <column datatype='real' name='cleaning_fee' ordinal='61' />
+              <column datatype='integer' name='guests_included' ordinal='62' />
+              <column datatype='real' name='extra_people' ordinal='63' />
+              <column datatype='integer' name='minimum_nights' ordinal='64' />
+              <column datatype='integer' name='maximum_nights' ordinal='65' />
+              <column datatype='string' name='calendar_updated' ordinal='66' />
+              <column datatype='boolean' name='has_availability' ordinal='67' />
+              <column datatype='integer' name='availability_30' ordinal='68' />
+              <column datatype='integer' name='availability_60' ordinal='69' />
+              <column datatype='integer' name='availability_90' ordinal='70' />
+              <column datatype='integer' name='availability_365' ordinal='71' />
+              <column datatype='date' name='calendar_last_scraped' ordinal='72' />
+              <column datatype='integer' name='number_of_reviews' ordinal='73' />
+              <column datatype='date' name='first_review' ordinal='74' />
+              <column datatype='date' name='last_review' ordinal='75' />
+              <column datatype='integer' name='review_scores_rating' ordinal='76' />
+              <column datatype='integer' name='review_scores_accuracy' ordinal='77' />
+              <column datatype='integer' name='review_scores_cleanliness' ordinal='78' />
+              <column datatype='integer' name='review_scores_checkin' ordinal='79' />
+              <column datatype='integer' name='review_scores_communication' ordinal='80' />
+              <column datatype='integer' name='review_scores_location' ordinal='81' />
+              <column datatype='integer' name='review_scores_value' ordinal='82' />
+              <column datatype='boolean' name='requires_license' ordinal='83' />
+              <column datatype='string' name='license' ordinal='84' />
+              <column datatype='string' name='jurisdiction_names' ordinal='85' />
+              <column datatype='boolean' name='instant_bookable' ordinal='86' />
+              <column datatype='string' name='cancellation_policy' ordinal='87' />
+              <column datatype='boolean' name='require_guest_profile_picture' ordinal='88' />
+              <column datatype='boolean' name='require_guest_phone_verification' ordinal='89' />
+              <column datatype='integer' name='calculated_host_listings_count' ordinal='90' />
+              <column datatype='real' name='reviews_per_month' ordinal='91' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0nas9dt0aucmz61cef9e20fbtlzj' name='calendar.csv' table='[calendar#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+              <column datatype='integer' name='listing_id' ordinal='0' />
+              <column datatype='date' name='date' ordinal='1' />
+              <column datatype='boolean' name='available' ordinal='2' />
+              <column datatype='real' name='price' ordinal='3' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[accommodates]' value='[listings.csv].[accommodates]' />
+          <map key='[amenities]' value='[listings.csv].[amenities]' />
+          <map key='[availability_30]' value='[listings.csv].[availability_30]' />
+          <map key='[availability_365]' value='[listings.csv].[availability_365]' />
+          <map key='[availability_60]' value='[listings.csv].[availability_60]' />
+          <map key='[availability_90]' value='[listings.csv].[availability_90]' />
+          <map key='[available]' value='[calendar.csv].[available]' />
+          <map key='[bathrooms]' value='[listings.csv].[bathrooms]' />
+          <map key='[bed_type]' value='[listings.csv].[bed_type]' />
+          <map key='[bedrooms]' value='[listings.csv].[bedrooms]' />
+          <map key='[beds]' value='[listings.csv].[beds]' />
+          <map key='[calculated_host_listings_count]' value='[listings.csv].[calculated_host_listings_count]' />
+          <map key='[calendar_last_scraped]' value='[listings.csv].[calendar_last_scraped]' />
+          <map key='[calendar_updated]' value='[listings.csv].[calendar_updated]' />
+          <map key='[cancellation_policy]' value='[listings.csv].[cancellation_policy]' />
+          <map key='[city]' value='[listings.csv].[city]' />
+          <map key='[cleaning_fee]' value='[listings.csv].[cleaning_fee]' />
+          <map key='[country]' value='[listings.csv].[country]' />
+          <map key='[country_code]' value='[listings.csv].[country_code]' />
+          <map key='[date]' value='[calendar.csv].[date]' />
+          <map key='[description]' value='[listings.csv].[description]' />
+          <map key='[experiences_offered]' value='[listings.csv].[experiences_offered]' />
+          <map key='[extra_people]' value='[listings.csv].[extra_people]' />
+          <map key='[first_review]' value='[listings.csv].[first_review]' />
+          <map key='[guests_included]' value='[listings.csv].[guests_included]' />
+          <map key='[has_availability]' value='[listings.csv].[has_availability]' />
+          <map key='[host_about]' value='[listings.csv].[host_about]' />
+          <map key='[host_acceptance_rate]' value='[listings.csv].[host_acceptance_rate]' />
+          <map key='[host_has_profile_pic]' value='[listings.csv].[host_has_profile_pic]' />
+          <map key='[host_id]' value='[listings.csv].[host_id]' />
+          <map key='[host_identity_verified]' value='[listings.csv].[host_identity_verified]' />
+          <map key='[host_is_superhost]' value='[listings.csv].[host_is_superhost]' />
+          <map key='[host_listings_count]' value='[listings.csv].[host_listings_count]' />
+          <map key='[host_location]' value='[listings.csv].[host_location]' />
+          <map key='[host_name]' value='[listings.csv].[host_name]' />
+          <map key='[host_neighbourhood]' value='[listings.csv].[host_neighbourhood]' />
+          <map key='[host_picture_url]' value='[listings.csv].[host_picture_url]' />
+          <map key='[host_response_rate]' value='[listings.csv].[host_response_rate]' />
+          <map key='[host_response_time]' value='[listings.csv].[host_response_time]' />
+          <map key='[host_since]' value='[listings.csv].[host_since]' />
+          <map key='[host_thumbnail_url]' value='[listings.csv].[host_thumbnail_url]' />
+          <map key='[host_total_listings_count]' value='[listings.csv].[host_total_listings_count]' />
+          <map key='[host_url]' value='[listings.csv].[host_url]' />
+          <map key='[host_verifications]' value='[listings.csv].[host_verifications]' />
+          <map key='[id]' value='[listings.csv].[id]' />
+          <map key='[instant_bookable]' value='[listings.csv].[instant_bookable]' />
+          <map key='[is_location_exact]' value='[listings.csv].[is_location_exact]' />
+          <map key='[jurisdiction_names]' value='[listings.csv].[jurisdiction_names]' />
+          <map key='[last_review]' value='[listings.csv].[last_review]' />
+          <map key='[last_scraped]' value='[listings.csv].[last_scraped]' />
+          <map key='[latitude]' value='[listings.csv].[latitude]' />
+          <map key='[license]' value='[listings.csv].[license]' />
+          <map key='[listing_id]' value='[calendar.csv].[listing_id]' />
+          <map key='[listing_url]' value='[listings.csv].[listing_url]' />
+          <map key='[longitude]' value='[listings.csv].[longitude]' />
+          <map key='[market]' value='[listings.csv].[market]' />
+          <map key='[maximum_nights]' value='[listings.csv].[maximum_nights]' />
+          <map key='[medium_url]' value='[listings.csv].[medium_url]' />
+          <map key='[minimum_nights]' value='[listings.csv].[minimum_nights]' />
+          <map key='[monthly_price]' value='[listings.csv].[monthly_price]' />
+          <map key='[name]' value='[listings.csv].[name]' />
+          <map key='[neighborhood_overview]' value='[listings.csv].[neighborhood_overview]' />
+          <map key='[neighbourhood]' value='[listings.csv].[neighbourhood]' />
+          <map key='[neighbourhood_cleansed]' value='[listings.csv].[neighbourhood_cleansed]' />
+          <map key='[neighbourhood_group_cleansed]' value='[listings.csv].[neighbourhood_group_cleansed]' />
+          <map key='[notes]' value='[listings.csv].[notes]' />
+          <map key='[number_of_reviews]' value='[listings.csv].[number_of_reviews]' />
+          <map key='[picture_url]' value='[listings.csv].[picture_url]' />
+          <map key='[price (calendar.csv)]' value='[calendar.csv].[price]' />
+          <map key='[price]' value='[listings.csv].[price]' />
+          <map key='[property_type]' value='[listings.csv].[property_type]' />
+          <map key='[require_guest_phone_verification]' value='[listings.csv].[require_guest_phone_verification]' />
+          <map key='[require_guest_profile_picture]' value='[listings.csv].[require_guest_profile_picture]' />
+          <map key='[requires_license]' value='[listings.csv].[requires_license]' />
+          <map key='[review_scores_accuracy]' value='[listings.csv].[review_scores_accuracy]' />
+          <map key='[review_scores_checkin]' value='[listings.csv].[review_scores_checkin]' />
+          <map key='[review_scores_cleanliness]' value='[listings.csv].[review_scores_cleanliness]' />
+          <map key='[review_scores_communication]' value='[listings.csv].[review_scores_communication]' />
+          <map key='[review_scores_location]' value='[listings.csv].[review_scores_location]' />
+          <map key='[review_scores_rating]' value='[listings.csv].[review_scores_rating]' />
+          <map key='[review_scores_value]' value='[listings.csv].[review_scores_value]' />
+          <map key='[reviews_per_month]' value='[listings.csv].[reviews_per_month]' />
+          <map key='[room_type]' value='[listings.csv].[room_type]' />
+          <map key='[scrape_id]' value='[listings.csv].[scrape_id]' />
+          <map key='[security_deposit]' value='[listings.csv].[security_deposit]' />
+          <map key='[smart_location]' value='[listings.csv].[smart_location]' />
+          <map key='[space]' value='[listings.csv].[space]' />
+          <map key='[square_feet]' value='[listings.csv].[square_feet]' />
+          <map key='[state]' value='[listings.csv].[state]' />
+          <map key='[street]' value='[listings.csv].[street]' />
+          <map key='[summary]' value='[listings.csv].[summary]' />
+          <map key='[thumbnail_url]' value='[listings.csv].[thumbnail_url]' />
+          <map key='[transit]' value='[listings.csv].[transit]' />
+          <map key='[weekly_price]' value='[listings.csv].[weekly_price]' />
+          <map key='[xl_picture_url]' value='[listings.csv].[xl_picture_url]' />
+          <map key='[zipcode]' value='[listings.csv].[zipcode]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_CA&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[calendar.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_CA&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>listing_url</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[listing_url]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>listing_url</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>scrape_id</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[scrape_id]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>scrape_id</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>last_scraped</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[last_scraped]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>last_scraped</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[name]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>summary</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[summary]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>summary</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>space</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[space]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>space</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>description</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[description]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>description</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>experiences_offered</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[experiences_offered]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>experiences_offered</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>neighborhood_overview</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[neighborhood_overview]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>neighborhood_overview</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>notes</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[notes]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>notes</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>transit</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[transit]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>transit</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>thumbnail_url</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[thumbnail_url]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>thumbnail_url</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>medium_url</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[medium_url]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>medium_url</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>picture_url</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[picture_url]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>picture_url</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>xl_picture_url</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[xl_picture_url]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>xl_picture_url</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>host_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[host_id]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>host_id</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>host_url</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[host_url]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>host_url</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>host_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[host_name]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>host_name</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>host_since</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[host_since]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>host_since</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>host_location</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[host_location]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>host_location</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>host_about</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[host_about]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>host_about</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>host_response_time</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[host_response_time]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>host_response_time</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>host_response_rate</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[host_response_rate]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>host_response_rate</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>host_acceptance_rate</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[host_acceptance_rate]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>host_acceptance_rate</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>host_is_superhost</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[host_is_superhost]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>host_is_superhost</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>host_thumbnail_url</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[host_thumbnail_url]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>host_thumbnail_url</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>host_picture_url</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[host_picture_url]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>host_picture_url</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>host_neighbourhood</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[host_neighbourhood]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>host_neighbourhood</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>host_listings_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[host_listings_count]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>host_listings_count</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>host_total_listings_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[host_total_listings_count]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>host_total_listings_count</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>host_verifications</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[host_verifications]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>host_verifications</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>host_has_profile_pic</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[host_has_profile_pic]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>host_has_profile_pic</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>host_identity_verified</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[host_identity_verified]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>host_identity_verified</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>street</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[street]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>street</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>neighbourhood</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[neighbourhood]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>neighbourhood</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>neighbourhood_cleansed</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[neighbourhood_cleansed]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>neighbourhood_cleansed</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>neighbourhood_group_cleansed</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[neighbourhood_group_cleansed]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>neighbourhood_group_cleansed</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>city</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[city]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>city</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>state</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[state]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>state</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>zipcode</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[zipcode]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>zipcode</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>market</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[market]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>market</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>smart_location</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[smart_location]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>smart_location</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country_code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country_code]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>country_code</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[latitude]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>latitude</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[longitude]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>longitude</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_location_exact</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[is_location_exact]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>is_location_exact</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>property_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[property_type]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>property_type</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>room_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[room_type]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>room_type</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>accommodates</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[accommodates]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>accommodates</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bathrooms</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[bathrooms]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>bathrooms</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bedrooms</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[bedrooms]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>bedrooms</remote-alias>
+            <ordinal>52</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>beds</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[beds]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>beds</remote-alias>
+            <ordinal>53</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bed_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[bed_type]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>bed_type</remote-alias>
+            <ordinal>54</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>amenities</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[amenities]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>amenities</remote-alias>
+            <ordinal>55</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>square_feet</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[square_feet]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>square_feet</remote-alias>
+            <ordinal>56</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[price]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>price</remote-alias>
+            <ordinal>57</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>weekly_price</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[weekly_price]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>weekly_price</remote-alias>
+            <ordinal>58</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>monthly_price</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[monthly_price]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>monthly_price</remote-alias>
+            <ordinal>59</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>security_deposit</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[security_deposit]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>security_deposit</remote-alias>
+            <ordinal>60</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cleaning_fee</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cleaning_fee]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>cleaning_fee</remote-alias>
+            <ordinal>61</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>guests_included</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[guests_included]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>guests_included</remote-alias>
+            <ordinal>62</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>extra_people</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[extra_people]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>extra_people</remote-alias>
+            <ordinal>63</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>minimum_nights</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[minimum_nights]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>minimum_nights</remote-alias>
+            <ordinal>64</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>maximum_nights</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[maximum_nights]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>maximum_nights</remote-alias>
+            <ordinal>65</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>calendar_updated</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[calendar_updated]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>calendar_updated</remote-alias>
+            <ordinal>66</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>has_availability</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[has_availability]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>has_availability</remote-alias>
+            <ordinal>67</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>availability_30</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[availability_30]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>availability_30</remote-alias>
+            <ordinal>68</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>availability_60</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[availability_60]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>availability_60</remote-alias>
+            <ordinal>69</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>availability_90</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[availability_90]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>availability_90</remote-alias>
+            <ordinal>70</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>availability_365</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[availability_365]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>availability_365</remote-alias>
+            <ordinal>71</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>calendar_last_scraped</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[calendar_last_scraped]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>calendar_last_scraped</remote-alias>
+            <ordinal>72</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>number_of_reviews</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[number_of_reviews]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>number_of_reviews</remote-alias>
+            <ordinal>73</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>first_review</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[first_review]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>first_review</remote-alias>
+            <ordinal>74</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>last_review</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[last_review]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>last_review</remote-alias>
+            <ordinal>75</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>review_scores_rating</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[review_scores_rating]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>review_scores_rating</remote-alias>
+            <ordinal>76</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>review_scores_accuracy</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[review_scores_accuracy]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>review_scores_accuracy</remote-alias>
+            <ordinal>77</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>review_scores_cleanliness</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[review_scores_cleanliness]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>review_scores_cleanliness</remote-alias>
+            <ordinal>78</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>review_scores_checkin</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[review_scores_checkin]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>review_scores_checkin</remote-alias>
+            <ordinal>79</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>review_scores_communication</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[review_scores_communication]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>review_scores_communication</remote-alias>
+            <ordinal>80</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>review_scores_location</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[review_scores_location]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>review_scores_location</remote-alias>
+            <ordinal>81</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>review_scores_value</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[review_scores_value]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>review_scores_value</remote-alias>
+            <ordinal>82</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>requires_license</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[requires_license]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>requires_license</remote-alias>
+            <ordinal>83</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>license</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[license]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>license</remote-alias>
+            <ordinal>84</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>jurisdiction_names</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[jurisdiction_names]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>jurisdiction_names</remote-alias>
+            <ordinal>85</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>instant_bookable</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[instant_bookable]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>instant_bookable</remote-alias>
+            <ordinal>86</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cancellation_policy</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cancellation_policy]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>cancellation_policy</remote-alias>
+            <ordinal>87</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>require_guest_profile_picture</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[require_guest_profile_picture]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>require_guest_profile_picture</remote-alias>
+            <ordinal>88</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>require_guest_phone_verification</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[require_guest_phone_verification]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>require_guest_phone_verification</remote-alias>
+            <ordinal>89</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>calculated_host_listings_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[calculated_host_listings_count]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>calculated_host_listings_count</remote-alias>
+            <ordinal>90</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>reviews_per_month</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[reviews_per_month]</local-name>
+            <parent-name>[listings.csv]</parent-name>
+            <remote-alias>reviews_per_month</remote-alias>
+            <ordinal>91</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>listing_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[listing_id]</local-name>
+            <parent-name>[calendar.csv]</parent-name>
+            <remote-alias>listing_id</remote-alias>
+            <ordinal>92</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[calendar.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>93</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>available</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[available]</local-name>
+            <parent-name>[calendar.csv]</parent-name>
+            <remote-alias>available</remote-alias>
+            <ordinal>94</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[price (calendar.csv)]</local-name>
+            <parent-name>[calendar.csv]</parent-name>
+            <remote-alias>price</remote-alias>
+            <ordinal>95</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='listings.csv' datatype='table' name='[__tableau_internal_object_id__].[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]' role='measure' type='quantitative' />
+      <column caption='Accommodates' datatype='integer' name='[accommodates]' role='measure' type='quantitative' />
+      <column caption='Amenities' datatype='string' name='[amenities]' role='dimension' type='nominal' />
+      <column caption='Availability 30' datatype='integer' name='[availability_30]' role='measure' type='quantitative' />
+      <column caption='Availability 365' datatype='integer' name='[availability_365]' role='measure' type='quantitative' />
+      <column caption='Availability 60' datatype='integer' name='[availability_60]' role='measure' type='quantitative' />
+      <column caption='Availability 90' datatype='integer' name='[availability_90]' role='measure' type='quantitative' />
+      <column caption='Available' datatype='boolean' name='[available]' role='dimension' type='nominal' />
+      <column caption='Bathrooms' datatype='real' name='[bathrooms]' role='measure' type='quantitative' />
+      <column caption='Bed Type' datatype='string' name='[bed_type]' role='dimension' type='nominal' />
+      <column caption='Bedrooms' datatype='integer' name='[bedrooms]' role='measure' type='quantitative' />
+      <column caption='Beds' datatype='integer' name='[beds]' role='measure' type='quantitative' />
+      <column caption='Calculated Host Listings Count' datatype='integer' name='[calculated_host_listings_count]' role='measure' type='quantitative' />
+      <column caption='Calendar Last Scraped' datatype='date' name='[calendar_last_scraped]' role='dimension' type='ordinal' />
+      <column caption='Calendar Updated' datatype='string' name='[calendar_updated]' role='dimension' type='nominal' />
+      <column caption='Cancellation Policy' datatype='string' name='[cancellation_policy]' role='dimension' type='nominal' />
+      <column caption='City' datatype='string' name='[city]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Cleaning Fee' datatype='real' name='[cleaning_fee]' role='measure' type='quantitative' />
+      <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Country Code' datatype='string' name='[country_code]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+      <column caption='Description' datatype='string' name='[description]' role='dimension' type='nominal' />
+      <column caption='Experiences Offered' datatype='string' name='[experiences_offered]' role='dimension' type='nominal' />
+      <column caption='Extra People' datatype='real' name='[extra_people]' role='measure' type='quantitative' />
+      <column caption='First Review' datatype='date' name='[first_review]' role='dimension' type='ordinal' />
+      <column caption='Guests Included' datatype='integer' name='[guests_included]' role='measure' type='quantitative' />
+      <column caption='Has Availability' datatype='boolean' name='[has_availability]' role='dimension' type='nominal' />
+      <column caption='Host About' datatype='string' name='[host_about]' role='dimension' type='nominal' />
+      <column caption='Host Acceptance Rate' datatype='string' name='[host_acceptance_rate]' role='dimension' type='nominal' />
+      <column caption='Host Has Profile Pic' datatype='boolean' name='[host_has_profile_pic]' role='dimension' type='nominal' />
+      <column caption='Host Id' datatype='integer' name='[host_id]' role='dimension' type='ordinal' />
+      <column caption='Host Identity Verified' datatype='boolean' name='[host_identity_verified]' role='dimension' type='nominal' />
+      <column caption='Host Is Superhost' datatype='boolean' name='[host_is_superhost]' role='dimension' type='nominal' />
+      <column caption='Host Listings Count' datatype='integer' name='[host_listings_count]' role='measure' type='quantitative' />
+      <column caption='Host Location' datatype='string' name='[host_location]' role='dimension' type='nominal' />
+      <column caption='Host Name' datatype='string' name='[host_name]' role='dimension' type='nominal' />
+      <column caption='Host Neighbourhood' datatype='string' name='[host_neighbourhood]' role='dimension' type='nominal' />
+      <column caption='Host Picture Url' datatype='string' name='[host_picture_url]' role='dimension' type='nominal' />
+      <column caption='Host Response Rate' datatype='string' name='[host_response_rate]' role='dimension' type='nominal' />
+      <column caption='Host Response Time' datatype='string' name='[host_response_time]' role='dimension' type='nominal' />
+      <column caption='Host Since' datatype='date' name='[host_since]' role='dimension' type='ordinal' />
+      <column caption='Host Thumbnail Url' datatype='string' name='[host_thumbnail_url]' role='dimension' type='nominal' />
+      <column caption='Host Total Listings Count' datatype='integer' name='[host_total_listings_count]' role='measure' type='quantitative' />
+      <column caption='Host Url' datatype='string' name='[host_url]' role='dimension' type='nominal' />
+      <column caption='Host Verifications' datatype='string' name='[host_verifications]' role='dimension' type='nominal' />
+      <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+      <column caption='Instant Bookable' datatype='boolean' name='[instant_bookable]' role='dimension' type='nominal' />
+      <column caption='Is Location Exact' datatype='boolean' name='[is_location_exact]' role='dimension' type='nominal' />
+      <column caption='Jurisdiction Names' datatype='string' name='[jurisdiction_names]' role='dimension' type='nominal' />
+      <column caption='Last Review' datatype='date' name='[last_review]' role='dimension' type='ordinal' />
+      <column caption='Last Scraped' datatype='date' name='[last_scraped]' role='dimension' type='ordinal' />
+      <column aggregation='Avg' caption='Latitude' datatype='real' name='[latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column caption='License' datatype='string' name='[license]' role='dimension' type='nominal' />
+      <column caption='Listing Id' datatype='integer' name='[listing_id]' role='dimension' type='ordinal' />
+      <column caption='Listing Url' datatype='string' name='[listing_url]' role='dimension' type='nominal' />
+      <column aggregation='Avg' caption='Longitude' datatype='real' name='[longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Market' datatype='string' name='[market]' role='dimension' type='nominal' />
+      <column caption='Maximum Nights' datatype='integer' name='[maximum_nights]' role='measure' type='quantitative' />
+      <column caption='Medium Url' datatype='string' name='[medium_url]' role='dimension' type='nominal' />
+      <column caption='Minimum Nights' datatype='integer' name='[minimum_nights]' role='measure' type='quantitative' />
+      <column caption='Monthly Price' datatype='real' name='[monthly_price]' role='measure' type='quantitative' />
+      <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+      <column caption='Neighborhood Overview' datatype='string' name='[neighborhood_overview]' role='dimension' type='nominal' />
+      <column caption='Neighbourhood' datatype='string' name='[neighbourhood]' role='dimension' type='nominal' />
+      <column caption='Neighbourhood Cleansed' datatype='string' name='[neighbourhood_cleansed]' role='dimension' type='nominal' />
+      <column caption='Neighbourhood Group Cleansed' datatype='string' name='[neighbourhood_group_cleansed]' role='dimension' type='nominal' />
+      <column caption='Notes' datatype='string' name='[notes]' role='dimension' type='nominal' />
+      <column caption='Number Of Reviews' datatype='integer' name='[number_of_reviews]' role='measure' type='quantitative' />
+      <column caption='Picture Url' datatype='string' name='[picture_url]' role='dimension' type='nominal' />
+      <column caption='Price (Calendar.Csv)' datatype='real' name='[price (calendar.csv)]' role='measure' type='quantitative' />
+      <column caption='Price' datatype='real' name='[price]' role='measure' type='quantitative' />
+      <column caption='Property Type' datatype='string' name='[property_type]' role='dimension' type='nominal' />
+      <column caption='Require Guest Phone Verification' datatype='boolean' name='[require_guest_phone_verification]' role='dimension' type='nominal' />
+      <column caption='Require Guest Profile Picture' datatype='boolean' name='[require_guest_profile_picture]' role='dimension' type='nominal' />
+      <column caption='Requires License' datatype='boolean' name='[requires_license]' role='dimension' type='nominal' />
+      <column caption='Review Scores Accuracy' datatype='integer' name='[review_scores_accuracy]' role='measure' type='quantitative' />
+      <column caption='Review Scores Checkin' datatype='integer' name='[review_scores_checkin]' role='measure' type='quantitative' />
+      <column caption='Review Scores Cleanliness' datatype='integer' name='[review_scores_cleanliness]' role='measure' type='quantitative' />
+      <column caption='Review Scores Communication' datatype='integer' name='[review_scores_communication]' role='measure' type='quantitative' />
+      <column caption='Review Scores Location' datatype='integer' name='[review_scores_location]' role='measure' type='quantitative' />
+      <column caption='Review Scores Rating' datatype='integer' name='[review_scores_rating]' role='measure' type='quantitative' />
+      <column caption='Review Scores Value' datatype='integer' name='[review_scores_value]' role='measure' type='quantitative' />
+      <column caption='Reviews Per Month' datatype='real' name='[reviews_per_month]' role='dimension' type='quantitative' />
+      <column caption='Room Type' datatype='string' name='[room_type]' role='dimension' type='nominal' />
+      <column caption='Scrape Id' datatype='real' name='[scrape_id]' role='dimension' type='ordinal' />
+      <column caption='Security Deposit' datatype='real' name='[security_deposit]' role='measure' type='quantitative' />
+      <column caption='Smart Location' datatype='string' name='[smart_location]' role='dimension' type='nominal' />
+      <column caption='Space' datatype='string' name='[space]' role='dimension' type='nominal' />
+      <column caption='Square Feet' datatype='integer' name='[square_feet]' role='measure' type='quantitative' />
+      <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Street' datatype='string' name='[street]' role='dimension' type='nominal' />
+      <column caption='Summary' datatype='string' name='[summary]' role='dimension' type='nominal' />
+      <column caption='Thumbnail Url' datatype='string' name='[thumbnail_url]' role='dimension' type='nominal' />
+      <column caption='Transit' datatype='string' name='[transit]' role='dimension' type='nominal' />
+      <column caption='Weekly Price' datatype='real' name='[weekly_price]' role='measure' type='quantitative' />
+      <column caption='Xl Picture Url' datatype='string' name='[xl_picture_url]' role='dimension' type='nominal' />
+      <column aggregation='Sum' caption='Zipcode' datatype='integer' default-format='*00000' name='[zipcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column-instance column='[zipcode]' derivation='None' name='[none:zipcode:ok]' pivot='key' type='ordinal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/alija/AppData/Local/Temp/TableauTemp/#TableauTemp_1glj3sm1sx265h1eebw061jybr1e.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='10/21/2024 06:27:17 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <cols>
+            <map key='[accommodates]' value='[Extract].[accommodates]' />
+            <map key='[amenities]' value='[Extract].[amenities]' />
+            <map key='[availability_30]' value='[Extract].[availability_30]' />
+            <map key='[availability_365]' value='[Extract].[availability_365]' />
+            <map key='[availability_60]' value='[Extract].[availability_60]' />
+            <map key='[availability_90]' value='[Extract].[availability_90]' />
+            <map key='[available]' value='[Extract].[available]' />
+            <map key='[bathrooms]' value='[Extract].[bathrooms]' />
+            <map key='[bed_type]' value='[Extract].[bed_type]' />
+            <map key='[bedrooms]' value='[Extract].[bedrooms]' />
+            <map key='[beds]' value='[Extract].[beds]' />
+            <map key='[calculated_host_listings_count]' value='[Extract].[calculated_host_listings_count]' />
+            <map key='[calendar_last_scraped]' value='[Extract].[calendar_last_scraped]' />
+            <map key='[calendar_updated]' value='[Extract].[calendar_updated]' />
+            <map key='[cancellation_policy]' value='[Extract].[cancellation_policy]' />
+            <map key='[city]' value='[Extract].[city]' />
+            <map key='[cleaning_fee]' value='[Extract].[cleaning_fee]' />
+            <map key='[country]' value='[Extract].[country]' />
+            <map key='[country_code]' value='[Extract].[country_code]' />
+            <map key='[date]' value='[Extract].[date]' />
+            <map key='[description]' value='[Extract].[description]' />
+            <map key='[experiences_offered]' value='[Extract].[experiences_offered]' />
+            <map key='[extra_people]' value='[Extract].[extra_people]' />
+            <map key='[first_review]' value='[Extract].[first_review]' />
+            <map key='[guests_included]' value='[Extract].[guests_included]' />
+            <map key='[has_availability]' value='[Extract].[has_availability]' />
+            <map key='[host_about]' value='[Extract].[host_about]' />
+            <map key='[host_acceptance_rate]' value='[Extract].[host_acceptance_rate]' />
+            <map key='[host_has_profile_pic]' value='[Extract].[host_has_profile_pic]' />
+            <map key='[host_id]' value='[Extract].[host_id]' />
+            <map key='[host_identity_verified]' value='[Extract].[host_identity_verified]' />
+            <map key='[host_is_superhost]' value='[Extract].[host_is_superhost]' />
+            <map key='[host_listings_count]' value='[Extract].[host_listings_count]' />
+            <map key='[host_location]' value='[Extract].[host_location]' />
+            <map key='[host_name]' value='[Extract].[host_name]' />
+            <map key='[host_neighbourhood]' value='[Extract].[host_neighbourhood]' />
+            <map key='[host_picture_url]' value='[Extract].[host_picture_url]' />
+            <map key='[host_response_rate]' value='[Extract].[host_response_rate]' />
+            <map key='[host_response_time]' value='[Extract].[host_response_time]' />
+            <map key='[host_since]' value='[Extract].[host_since]' />
+            <map key='[host_thumbnail_url]' value='[Extract].[host_thumbnail_url]' />
+            <map key='[host_total_listings_count]' value='[Extract].[host_total_listings_count]' />
+            <map key='[host_url]' value='[Extract].[host_url]' />
+            <map key='[host_verifications]' value='[Extract].[host_verifications]' />
+            <map key='[id]' value='[Extract].[id]' />
+            <map key='[instant_bookable]' value='[Extract].[instant_bookable]' />
+            <map key='[is_location_exact]' value='[Extract].[is_location_exact]' />
+            <map key='[jurisdiction_names]' value='[Extract].[jurisdiction_names]' />
+            <map key='[last_review]' value='[Extract].[last_review]' />
+            <map key='[last_scraped]' value='[Extract].[last_scraped]' />
+            <map key='[latitude]' value='[Extract].[latitude]' />
+            <map key='[license]' value='[Extract].[license]' />
+            <map key='[listing_id]' value='[Extract].[listing_id]' />
+            <map key='[listing_url]' value='[Extract].[listing_url]' />
+            <map key='[longitude]' value='[Extract].[longitude]' />
+            <map key='[market]' value='[Extract].[market]' />
+            <map key='[maximum_nights]' value='[Extract].[maximum_nights]' />
+            <map key='[medium_url]' value='[Extract].[medium_url]' />
+            <map key='[minimum_nights]' value='[Extract].[minimum_nights]' />
+            <map key='[monthly_price]' value='[Extract].[monthly_price]' />
+            <map key='[name]' value='[Extract].[name]' />
+            <map key='[neighborhood_overview]' value='[Extract].[neighborhood_overview]' />
+            <map key='[neighbourhood]' value='[Extract].[neighbourhood]' />
+            <map key='[neighbourhood_cleansed]' value='[Extract].[neighbourhood_cleansed]' />
+            <map key='[neighbourhood_group_cleansed]' value='[Extract].[neighbourhood_group_cleansed]' />
+            <map key='[notes]' value='[Extract].[notes]' />
+            <map key='[number_of_reviews]' value='[Extract].[number_of_reviews]' />
+            <map key='[picture_url]' value='[Extract].[picture_url]' />
+            <map key='[price (calendar.csv)]' value='[Extract].[price]' />
+            <map key='[price]' value='[Extract].[price1]' />
+            <map key='[property_type]' value='[Extract].[property_type]' />
+            <map key='[require_guest_phone_verification]' value='[Extract].[require_guest_phone_verification]' />
+            <map key='[require_guest_profile_picture]' value='[Extract].[require_guest_profile_picture]' />
+            <map key='[requires_license]' value='[Extract].[requires_license]' />
+            <map key='[review_scores_accuracy]' value='[Extract].[review_scores_accuracy]' />
+            <map key='[review_scores_checkin]' value='[Extract].[review_scores_checkin]' />
+            <map key='[review_scores_cleanliness]' value='[Extract].[review_scores_cleanliness]' />
+            <map key='[review_scores_communication]' value='[Extract].[review_scores_communication]' />
+            <map key='[review_scores_location]' value='[Extract].[review_scores_location]' />
+            <map key='[review_scores_rating]' value='[Extract].[review_scores_rating]' />
+            <map key='[review_scores_value]' value='[Extract].[review_scores_value]' />
+            <map key='[reviews_per_month]' value='[Extract].[reviews_per_month]' />
+            <map key='[room_type]' value='[Extract].[room_type]' />
+            <map key='[scrape_id]' value='[Extract].[scrape_id]' />
+            <map key='[security_deposit]' value='[Extract].[security_deposit]' />
+            <map key='[smart_location]' value='[Extract].[smart_location]' />
+            <map key='[space]' value='[Extract].[space]' />
+            <map key='[square_feet]' value='[Extract].[square_feet]' />
+            <map key='[state]' value='[Extract].[state]' />
+            <map key='[street]' value='[Extract].[street]' />
+            <map key='[summary]' value='[Extract].[summary]' />
+            <map key='[thumbnail_url]' value='[Extract].[thumbnail_url]' />
+            <map key='[transit]' value='[Extract].[transit]' />
+            <map key='[weekly_price]' value='[Extract].[weekly_price]' />
+            <map key='[xl_picture_url]' value='[Extract].[xl_picture_url]' />
+            <map key='[zipcode]' value='[Extract].[zipcode]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12629</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>listing_url</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[listing_url]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>listing_url</remote-alias>
+              <ordinal>1</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>12629</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>scrape_id</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[scrape_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>scrape_id</remote-alias>
+              <ordinal>2</ordinal>
+              <family>listings.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>last_scraped</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[last_scraped]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>last_scraped</remote-alias>
+              <ordinal>3</ordinal>
+              <family>listings.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>name</remote-alias>
+              <ordinal>4</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>12482</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>summary</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[summary]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>summary</remote-alias>
+              <ordinal>5</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10881</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>space</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[space]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>space</remote-alias>
+              <ordinal>6</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10078</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>description</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[description]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>description</remote-alias>
+              <ordinal>7</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>12267</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>experiences_offered</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[experiences_offered]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>experiences_offered</remote-alias>
+              <ordinal>8</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>neighborhood_overview</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[neighborhood_overview]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>neighborhood_overview</remote-alias>
+              <ordinal>9</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7882</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>notes</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[notes]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>notes</remote-alias>
+              <ordinal>10</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6239</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>transit</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[transit]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>transit</remote-alias>
+              <ordinal>11</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7870</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>thumbnail_url</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[thumbnail_url]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>thumbnail_url</remote-alias>
+              <ordinal>12</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11371</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>medium_url</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[medium_url]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>medium_url</remote-alias>
+              <ordinal>13</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11371</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>picture_url</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[picture_url]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>picture_url</remote-alias>
+              <ordinal>14</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>12629</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>xl_picture_url</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[xl_picture_url]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>xl_picture_url</remote-alias>
+              <ordinal>15</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11371</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>host_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[host_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>host_id</remote-alias>
+              <ordinal>16</ordinal>
+              <family>listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8026</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>host_url</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[host_url]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>host_url</remote-alias>
+              <ordinal>17</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8026</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>host_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[host_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>host_name</remote-alias>
+              <ordinal>18</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3806</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>host_since</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[host_since]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>host_since</remote-alias>
+              <ordinal>19</ordinal>
+              <family>listings.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>3336</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>host_location</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[host_location]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>host_location</remote-alias>
+              <ordinal>20</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>231</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>host_about</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[host_about]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>host_about</remote-alias>
+              <ordinal>21</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5829</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>host_response_time</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[host_response_time]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>host_response_time</remote-alias>
+              <ordinal>22</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>host_response_rate</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[host_response_rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>host_response_rate</remote-alias>
+              <ordinal>23</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>69</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>host_acceptance_rate</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[host_acceptance_rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>host_acceptance_rate</remote-alias>
+              <ordinal>24</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>host_is_superhost</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[host_is_superhost]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>host_is_superhost</remote-alias>
+              <ordinal>25</ordinal>
+              <family>listings.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>host_thumbnail_url</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[host_thumbnail_url]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>host_thumbnail_url</remote-alias>
+              <ordinal>26</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7996</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>host_picture_url</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[host_picture_url]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>host_picture_url</remote-alias>
+              <ordinal>27</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7996</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>host_neighbourhood</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[host_neighbourhood]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>host_neighbourhood</remote-alias>
+              <ordinal>28</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>160</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>host_listings_count</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[host_listings_count]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>host_listings_count</remote-alias>
+              <ordinal>29</ordinal>
+              <family>listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>44</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>host_total_listings_count</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[host_total_listings_count]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>host_total_listings_count</remote-alias>
+              <ordinal>30</ordinal>
+              <family>listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>44</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>host_verifications</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[host_verifications]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>host_verifications</remote-alias>
+              <ordinal>31</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>179</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>host_has_profile_pic</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[host_has_profile_pic]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>host_has_profile_pic</remote-alias>
+              <ordinal>32</ordinal>
+              <family>listings.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>host_identity_verified</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[host_identity_verified]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>host_identity_verified</remote-alias>
+              <ordinal>33</ordinal>
+              <family>listings.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>street</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[street]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>street</remote-alias>
+              <ordinal>34</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3093</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>neighbourhood</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[neighbourhood]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>neighbourhood</remote-alias>
+              <ordinal>35</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>87</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>neighbourhood_cleansed</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[neighbourhood_cleansed]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>neighbourhood_cleansed</remote-alias>
+              <ordinal>36</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>57</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>neighbourhood_group_cleansed</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[neighbourhood_group_cleansed]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>neighbourhood_group_cleansed</remote-alias>
+              <ordinal>37</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>city</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[city]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>city</remote-alias>
+              <ordinal>38</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>state</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[state]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>state</remote-alias>
+              <ordinal>39</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>zipcode</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[zipcode]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>zipcode</remote-alias>
+              <ordinal>40</ordinal>
+              <family>listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>28</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>market</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[market]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>market</remote-alias>
+              <ordinal>41</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>smart_location</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[smart_location]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>smart_location</remote-alias>
+              <ordinal>42</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>country_code</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[country_code]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>country_code</remote-alias>
+              <ordinal>43</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[country]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>country</remote-alias>
+              <ordinal>44</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>latitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[latitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>latitude</remote-alias>
+              <ordinal>45</ordinal>
+              <family>listings.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12629</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>longitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[longitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>longitude</remote-alias>
+              <ordinal>46</ordinal>
+              <family>listings.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12615</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>is_location_exact</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[is_location_exact]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>is_location_exact</remote-alias>
+              <ordinal>47</ordinal>
+              <family>listings.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>property_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[property_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>property_type</remote-alias>
+              <ordinal>48</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>25</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>room_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[room_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>room_type</remote-alias>
+              <ordinal>49</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>accommodates</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[accommodates]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>accommodates</remote-alias>
+              <ordinal>50</ordinal>
+              <family>listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>15</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>bathrooms</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[bathrooms]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>bathrooms</remote-alias>
+              <ordinal>51</ordinal>
+              <family>listings.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>bedrooms</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[bedrooms]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>bedrooms</remote-alias>
+              <ordinal>52</ordinal>
+              <family>listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>beds</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[beds]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>beds</remote-alias>
+              <ordinal>53</ordinal>
+              <family>listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>bed_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[bed_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>bed_type</remote-alias>
+              <ordinal>54</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>amenities</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[amenities]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>amenities</remote-alias>
+              <ordinal>55</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10435</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>square_feet</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[square_feet]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>square_feet</remote-alias>
+              <ordinal>56</ordinal>
+              <family>listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>88</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>price1</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[price]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>price1</remote-alias>
+              <ordinal>57</ordinal>
+              <family>listings.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>505</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>weekly_price</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[weekly_price]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>weekly_price</remote-alias>
+              <ordinal>58</ordinal>
+              <family>listings.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>917</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>monthly_price</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[monthly_price]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>monthly_price</remote-alias>
+              <ordinal>59</ordinal>
+              <family>listings.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>784</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>security_deposit</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[security_deposit]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>security_deposit</remote-alias>
+              <ordinal>60</ordinal>
+              <family>listings.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>73</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cleaning_fee</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[cleaning_fee]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cleaning_fee</remote-alias>
+              <ordinal>61</ordinal>
+              <family>listings.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>186</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>guests_included</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[guests_included]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>guests_included</remote-alias>
+              <ordinal>62</ordinal>
+              <family>listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>extra_people</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[extra_people]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>extra_people</remote-alias>
+              <ordinal>63</ordinal>
+              <family>listings.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>39</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>minimum_nights</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[minimum_nights]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>minimum_nights</remote-alias>
+              <ordinal>64</ordinal>
+              <family>listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>maximum_nights</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[maximum_nights]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>maximum_nights</remote-alias>
+              <ordinal>65</ordinal>
+              <family>listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>115</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>calendar_updated</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[calendar_updated]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>calendar_updated</remote-alias>
+              <ordinal>66</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>has_availability</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[has_availability]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>has_availability</remote-alias>
+              <ordinal>67</ordinal>
+              <family>listings.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>availability_30</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[availability_30]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>availability_30</remote-alias>
+              <ordinal>68</ordinal>
+              <family>listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>availability_60</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[availability_60]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>availability_60</remote-alias>
+              <ordinal>69</ordinal>
+              <family>listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>61</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>availability_90</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[availability_90]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>availability_90</remote-alias>
+              <ordinal>70</ordinal>
+              <family>listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>91</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>availability_365</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[availability_365]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>availability_365</remote-alias>
+              <ordinal>71</ordinal>
+              <family>listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>595</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>calendar_last_scraped</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[calendar_last_scraped]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>calendar_last_scraped</remote-alias>
+              <ordinal>72</ordinal>
+              <family>listings.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>number_of_reviews</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[number_of_reviews]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>number_of_reviews</remote-alias>
+              <ordinal>73</ordinal>
+              <family>listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>380</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>first_review</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[first_review]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>first_review</remote-alias>
+              <ordinal>74</ordinal>
+              <family>listings.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>2538</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>last_review</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[last_review]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>last_review</remote-alias>
+              <ordinal>75</ordinal>
+              <family>listings.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>691</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>review_scores_rating</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[review_scores_rating]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>review_scores_rating</remote-alias>
+              <ordinal>76</ordinal>
+              <family>listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>review_scores_accuracy</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[review_scores_accuracy]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>review_scores_accuracy</remote-alias>
+              <ordinal>77</ordinal>
+              <family>listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>review_scores_cleanliness</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[review_scores_cleanliness]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>review_scores_cleanliness</remote-alias>
+              <ordinal>78</ordinal>
+              <family>listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>review_scores_checkin</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[review_scores_checkin]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>review_scores_checkin</remote-alias>
+              <ordinal>79</ordinal>
+              <family>listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>review_scores_communication</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[review_scores_communication]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>review_scores_communication</remote-alias>
+              <ordinal>80</ordinal>
+              <family>listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>review_scores_location</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[review_scores_location]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>review_scores_location</remote-alias>
+              <ordinal>81</ordinal>
+              <family>listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>review_scores_value</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[review_scores_value]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>review_scores_value</remote-alias>
+              <ordinal>82</ordinal>
+              <family>listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>requires_license</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[requires_license]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>requires_license</remote-alias>
+              <ordinal>83</ordinal>
+              <family>listings.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>license</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[license]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>license</remote-alias>
+              <ordinal>84</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>jurisdiction_names</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[jurisdiction_names]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>jurisdiction_names</remote-alias>
+              <ordinal>85</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>instant_bookable</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[instant_bookable]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>instant_bookable</remote-alias>
+              <ordinal>86</ordinal>
+              <family>listings.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cancellation_policy</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[cancellation_policy]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cancellation_policy</remote-alias>
+              <ordinal>87</ordinal>
+              <family>listings.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>require_guest_profile_picture</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[require_guest_profile_picture]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>require_guest_profile_picture</remote-alias>
+              <ordinal>88</ordinal>
+              <family>listings.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>require_guest_phone_verification</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[require_guest_phone_verification]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>require_guest_phone_verification</remote-alias>
+              <ordinal>89</ordinal>
+              <family>listings.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>calculated_host_listings_count</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[calculated_host_listings_count]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>calculated_host_listings_count</remote-alias>
+              <ordinal>90</ordinal>
+              <family>listings.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>18</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>reviews_per_month</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[reviews_per_month]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>reviews_per_month</remote-alias>
+              <ordinal>91</ordinal>
+              <family>listings.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1264</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>listing_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[listing_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>listing_id</remote-alias>
+              <ordinal>92</ordinal>
+              <family>calendar.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12629</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>date</remote-alias>
+              <ordinal>93</ordinal>
+              <family>calendar.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>365</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>available</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[available]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>available</remote-alias>
+              <ordinal>94</ordinal>
+              <family>calendar.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>price</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[price (calendar.csv)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>price</remote-alias>
+              <ordinal>95</ordinal>
+              <family>calendar.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1023</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[listings.csv_DE8D35CB85A34B4280A88530D07C7B07]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:zipcode:ok]' type='palette'>
+            <map to='#499894'>
+              <bucket>98109</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>98101</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>98134</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>98105</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>98177</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>98117</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>98112</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>98106</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>98178</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>98126</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>98102</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>98136</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>98122</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>98107</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>98199</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>98118</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>98119</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>98125</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>98133</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>98115</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>98108</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>98103</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>98144</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>98121</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>98116</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>98104</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>98146</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Canada&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='listings.csv' id='listings.csv_DE8D35CB85A34B4280A88530D07C7B07'>
+            <properties context=''>
+              <relation join='inner' type='join'>
+                <clause type='join'>
+                  <expression op='='>
+                    <expression op='[listings.csv].[id]' />
+                    <expression op='[calendar.csv].[listing_id]' />
+                  </expression>
+                </clause>
+                <relation connection='textscan.0nas9dt0aucmz61cef9e20fbtlzj' name='listings.csv' table='[listings#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+                    <column datatype='integer' name='id' ordinal='0' />
+                    <column datatype='string' name='listing_url' ordinal='1' />
+                    <column datatype='real' name='scrape_id' ordinal='2' />
+                    <column datatype='date' name='last_scraped' ordinal='3' />
+                    <column datatype='string' name='name' ordinal='4' />
+                    <column datatype='string' name='summary' ordinal='5' />
+                    <column datatype='string' name='space' ordinal='6' />
+                    <column datatype='string' name='description' ordinal='7' />
+                    <column datatype='string' name='experiences_offered' ordinal='8' />
+                    <column datatype='string' name='neighborhood_overview' ordinal='9' />
+                    <column datatype='string' name='notes' ordinal='10' />
+                    <column datatype='string' name='transit' ordinal='11' />
+                    <column datatype='string' name='thumbnail_url' ordinal='12' />
+                    <column datatype='string' name='medium_url' ordinal='13' />
+                    <column datatype='string' name='picture_url' ordinal='14' />
+                    <column datatype='string' name='xl_picture_url' ordinal='15' />
+                    <column datatype='integer' name='host_id' ordinal='16' />
+                    <column datatype='string' name='host_url' ordinal='17' />
+                    <column datatype='string' name='host_name' ordinal='18' />
+                    <column datatype='date' name='host_since' ordinal='19' />
+                    <column datatype='string' name='host_location' ordinal='20' />
+                    <column datatype='string' name='host_about' ordinal='21' />
+                    <column datatype='string' name='host_response_time' ordinal='22' />
+                    <column datatype='string' name='host_response_rate' ordinal='23' />
+                    <column datatype='string' name='host_acceptance_rate' ordinal='24' />
+                    <column datatype='boolean' name='host_is_superhost' ordinal='25' />
+                    <column datatype='string' name='host_thumbnail_url' ordinal='26' />
+                    <column datatype='string' name='host_picture_url' ordinal='27' />
+                    <column datatype='string' name='host_neighbourhood' ordinal='28' />
+                    <column datatype='integer' name='host_listings_count' ordinal='29' />
+                    <column datatype='integer' name='host_total_listings_count' ordinal='30' />
+                    <column datatype='string' name='host_verifications' ordinal='31' />
+                    <column datatype='boolean' name='host_has_profile_pic' ordinal='32' />
+                    <column datatype='boolean' name='host_identity_verified' ordinal='33' />
+                    <column datatype='string' name='street' ordinal='34' />
+                    <column datatype='string' name='neighbourhood' ordinal='35' />
+                    <column datatype='string' name='neighbourhood_cleansed' ordinal='36' />
+                    <column datatype='string' name='neighbourhood_group_cleansed' ordinal='37' />
+                    <column datatype='string' name='city' ordinal='38' />
+                    <column datatype='string' name='state' ordinal='39' />
+                    <column datatype='integer' name='zipcode' ordinal='40' />
+                    <column datatype='string' name='market' ordinal='41' />
+                    <column datatype='string' name='smart_location' ordinal='42' />
+                    <column datatype='string' name='country_code' ordinal='43' />
+                    <column datatype='string' name='country' ordinal='44' />
+                    <column datatype='real' name='latitude' ordinal='45' />
+                    <column datatype='real' name='longitude' ordinal='46' />
+                    <column datatype='boolean' name='is_location_exact' ordinal='47' />
+                    <column datatype='string' name='property_type' ordinal='48' />
+                    <column datatype='string' name='room_type' ordinal='49' />
+                    <column datatype='integer' name='accommodates' ordinal='50' />
+                    <column datatype='real' name='bathrooms' ordinal='51' />
+                    <column datatype='integer' name='bedrooms' ordinal='52' />
+                    <column datatype='integer' name='beds' ordinal='53' />
+                    <column datatype='string' name='bed_type' ordinal='54' />
+                    <column datatype='string' name='amenities' ordinal='55' />
+                    <column datatype='integer' name='square_feet' ordinal='56' />
+                    <column datatype='real' name='price' ordinal='57' />
+                    <column datatype='real' name='weekly_price' ordinal='58' />
+                    <column datatype='real' name='monthly_price' ordinal='59' />
+                    <column datatype='real' name='security_deposit' ordinal='60' />
+                    <column datatype='real' name='cleaning_fee' ordinal='61' />
+                    <column datatype='integer' name='guests_included' ordinal='62' />
+                    <column datatype='real' name='extra_people' ordinal='63' />
+                    <column datatype='integer' name='minimum_nights' ordinal='64' />
+                    <column datatype='integer' name='maximum_nights' ordinal='65' />
+                    <column datatype='string' name='calendar_updated' ordinal='66' />
+                    <column datatype='boolean' name='has_availability' ordinal='67' />
+                    <column datatype='integer' name='availability_30' ordinal='68' />
+                    <column datatype='integer' name='availability_60' ordinal='69' />
+                    <column datatype='integer' name='availability_90' ordinal='70' />
+                    <column datatype='integer' name='availability_365' ordinal='71' />
+                    <column datatype='date' name='calendar_last_scraped' ordinal='72' />
+                    <column datatype='integer' name='number_of_reviews' ordinal='73' />
+                    <column datatype='date' name='first_review' ordinal='74' />
+                    <column datatype='date' name='last_review' ordinal='75' />
+                    <column datatype='integer' name='review_scores_rating' ordinal='76' />
+                    <column datatype='integer' name='review_scores_accuracy' ordinal='77' />
+                    <column datatype='integer' name='review_scores_cleanliness' ordinal='78' />
+                    <column datatype='integer' name='review_scores_checkin' ordinal='79' />
+                    <column datatype='integer' name='review_scores_communication' ordinal='80' />
+                    <column datatype='integer' name='review_scores_location' ordinal='81' />
+                    <column datatype='integer' name='review_scores_value' ordinal='82' />
+                    <column datatype='boolean' name='requires_license' ordinal='83' />
+                    <column datatype='string' name='license' ordinal='84' />
+                    <column datatype='string' name='jurisdiction_names' ordinal='85' />
+                    <column datatype='boolean' name='instant_bookable' ordinal='86' />
+                    <column datatype='string' name='cancellation_policy' ordinal='87' />
+                    <column datatype='boolean' name='require_guest_profile_picture' ordinal='88' />
+                    <column datatype='boolean' name='require_guest_phone_verification' ordinal='89' />
+                    <column datatype='integer' name='calculated_host_listings_count' ordinal='90' />
+                    <column datatype='real' name='reviews_per_month' ordinal='91' />
+                  </columns>
+                </relation>
+                <relation connection='textscan.0nas9dt0aucmz61cef9e20fbtlzj' name='calendar.csv' table='[calendar#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+                    <column datatype='integer' name='listing_id' ordinal='0' />
+                    <column datatype='date' name='date' ordinal='1' />
+                    <column datatype='boolean' name='available' ordinal='2' />
+                    <column datatype='real' name='price' ordinal='3' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Avrage Price by ZipCode'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='26'>Avrage Price by Zipcode</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='listings+' name='federated.1slpx7b1xcygv91es9t3n11umt3y' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1slpx7b1xcygv91es9t3n11umt3y'>
+            <column-instance column='[price]' derivation='Avg' name='[avg:price:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[zipcode]' derivation='None' name='[none:zipcode:ok]' pivot='key' type='ordinal' />
+            <column caption='Price' datatype='real' name='[price]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Zipcode' datatype='integer' default-format='*00000' name='[zipcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1slpx7b1xcygv91es9t3n11umt3y].[none:zipcode:ok]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:zipcode:ok]' />
+              <groupfilter function='member' level='[none:zipcode:ok]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.1slpx7b1xcygv91es9t3n11umt3y].[none:zipcode:ok]' direction='ASC'>
+            <dictionary>
+              <bucket>98134</bucket>
+              <bucket>98119</bucket>
+              <bucket>98101</bucket>
+              <bucket>98109</bucket>
+              <bucket>98121</bucket>
+              <bucket>98199</bucket>
+              <bucket>98116</bucket>
+              <bucket>98136</bucket>
+              <bucket>98112</bucket>
+              <bucket>98104</bucket>
+              <bucket>98122</bucket>
+              <bucket>98102</bucket>
+              <bucket>98126</bucket>
+              <bucket>98107</bucket>
+              <bucket>98103</bucket>
+              <bucket>98115</bucket>
+              <bucket>98144</bucket>
+              <bucket>98105</bucket>
+              <bucket>98146</bucket>
+              <bucket>98117</bucket>
+              <bucket>98178</bucket>
+              <bucket>98118</bucket>
+              <bucket>98108</bucket>
+              <bucket>98177</bucket>
+              <bucket>98106</bucket>
+              <bucket>98133</bucket>
+              <bucket>98125</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.1slpx7b1xcygv91es9t3n11umt3y].[none:zipcode:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.1slpx7b1xcygv91es9t3n11umt3y].[avg:price:qk]' />
+              <color column='[federated.1slpx7b1xcygv91es9t3n11umt3y].[none:zipcode:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='left' />
+                <format attr='wrap' value='auto' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='size' value='1.5272375345230103' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1slpx7b1xcygv91es9t3n11umt3y].[avg:price:qk]</rows>
+        <cols>[federated.1slpx7b1xcygv91es9t3n11umt3y].[none:zipcode:ok]</cols>
+      </table>
+      <simple-id uuid='{4F4C7F34-F96F-4CA2-8165-C42921F45524}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.5' source-height='44'>
+    <window class='worksheet' maximized='true' name='Avrage Price by ZipCode'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1slpx7b1xcygv91es9t3n11umt3y].[none:zipcode:ok]' type='color' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='88'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1slpx7b1xcygv91es9t3n11umt3y].[none:zipcode:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{17A456F8-0B5C-48D9-B074-2C2E8D1D7F08}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Avrage Price by ZipCode' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAATS0lEQVR4nO3d/28b933H8efd8Yuo7xJFfbMsubblWnIc203q2EVmLF1btMvQdi2yNEDS
+      ZmhQoOgv2//SYANWoL/sl/wyYAm6zVkRLHGq2HEjS7HlyLL1XSIlUSIlUuSRJ/I++0G2ZFlK
+      c2d9pe79AAyJ5H14b8l6kby7z/tOU0ophPAofb8LEGI/SQCEp0kAhKdJAISnSQCEp/l24klk
+      R5IoVTsSAADbtrFtG03Tduophdh1jgNQyGd4MDpJfaSZTHIWrayacr1AyoITx46i66ufpgzD
+      2LVihdhpjrcBdH+ItpYIy8tZ2o4eJbucJm2uUFa0yO9mhULsIscBWFlOMjmfoaMtwr2hETpP
+      nmDFsjCtFeQ1X5Qq59sAvgABFkkuLVNRHmI2vkBHeysZS+EHZDNYlCJtp+YCKaWwbVu2AURJ
+      keMAwtMkAMLTJADC0yQAwtMkAMLTJADC0yQAwtMkAMLTJADC0xwHQNlFxkeHWTYtMqkE5orN
+      8lKCWDyxm/UJsaucT4deyRNubGRqYpKyYgJf67NkZufxo1hpqFt7ImmOEaXEcQB0FOMTUU6d
+      OoWV0EmyOvffh6II6A8bYgByuRyGYaBpGrZt4/f7MU2TUCiEpmnkcjl8Ph8+34714wjxVBz/
+      BeayWTQNkotJUvPLFINzNFSFSFtQpmkoff3T1O3bt5mfn8cwDCzLorm5mWw2y7e+9S1M0+SD
+      Dz7g4sWLtLW17coPJYRTjgNQURehuy4CQGO4fu3+8BPL6bqOpml0dXUxOzuLz+djbGyMxsZG
+      JiYmsG2bYDDI4OCgBEDsux3fC5TL5RgbGyObzaLrOplMhgsXLpDL5SgvLyccDqNpGo2NjTu9
+      aiFck34A4Wk7vhU6MbvE//552PHyf3+li/qq0E6XIYQjOx6A2cQy7/5pyPHy33nuuARA7Bs5
+      Eiw8TQIgPE0CIDxNAiA8TQIgPE0CIDxNAiA8TQIgPM316dFrw41kF+cIVNZjFE3Seeg80bGb
+      NQqxa5z3A/hDtETqWEgn0AN15LMpwKACm5xSBB72AxQf9gQ4VbRtCoWC27qF2BGOA5BPzTMe
+      X6azo5mx0WnQQVMWlg1NmrZ+gQzd3acqQ9elMUbsG8d/eb5QFQ3VBayCTtuRRnxllRi2hVlY
+      fRJphBSlyHEA/MEQra2PJq2VP7qXwM7XJMSekb1AwtMkAMLTJADC0yQAwtMkAMLTJADC0yQA
+      wtMkAMLTJADC0yQAwtMkAMLTJADC0xxPhitaJtd773D5+We4M3Aff3klAZVnOa949mz3btYo
+      xK5xHAAjECISrgFlY9uwlEzQGG6gsdzGVIqgNMSIEuQ4AJaZZiY2Q1VNPdWVASp9ddhWmtn8
+      akOMJg0xogQ5/ssLhKq4cuXK6o3Ghk2PS0OMKEWyESw8TQIgPE0CIDxNAiA8TQIgPE0CIDxN
+      AiA8TQIgPE0CIDxNAiA8TQIgPE0CIDzNVQDMnAko0qlFzJyFlTdJZ8xdKk2I3eeqIeZmbz8v
+      vnCekdEpNEMjoGvYtuLUM2cwdrNKIXaJq4aY5kg92IpiYQW/rwx/sIwybFaUQpOGGFGCXDXE
+      pFIpZhMpKkJBfOVVlBsFUnmDVk0DaYgRJchVQ8zzzz0PQEtT09r9LQ+/SkOMKEWyF0h4mgRA
+      eJoEQHiaBEB4mgRAeJoEQHiaBEB42oEKgFKK27dvk81muXHjBn/84x9JpVLcvXsXANu2+eyz
+      z7BdHm0W4sscqADYts3CwgKZTIaLFy8SCARYWVlhenoagJWVFaLRKMVicZ8rFYfFgQqAYRg0
+      NKyednFsbIyOjg7C4TB+vx+AYDBIXV3dfpYoDpkDFQDLsojH40xNTVFZWUl7ezsPHjxYe+Wf
+      nZ3FNE1GRkb2u1RxSByoWWiBQICXXnppw30nT57k5MmTa7e/+93v7nVZ4hBzHAClbMbGJzl2
+      tIUHD0bBX0a4Kkg6r+hoa/nqJ3AgdWeU6Xc+cLz8iX96hUC4ekfWLbzJcQDsgsVSOo1mdHDi
+      5NcYGY+SWMwQQJFXCp9to5TCVu7mhdq2vbZRW1wpUMzmHY8tFouyQSy2xXlDjL+M8rIAANHJ
+      CVrbvsbU6DAFQAM0TYPHvjqlaRr6wx4Cl0PRHxurlKKvr4/u7m6mp6dJp9O0tbUxODjICy+8
+      gGVZfPrpp5w/f57a2lp3KxKHlquGmGKhSCyeoLahifKAQUtTmHQeApqGYvWP0OXfMJqmrYfH
+      7ejHxhaLRRYXF8lms3z00Ud0d3fz4YcfUl9fj1KKwcFBuru7uXnzJt/73vdcVikOK1cNMV1d
+      XRvuq6oNU7XjJT0dn89HfX09AI2NjeTzefx+P62trcRiMU6fPk1PT8/aO4YQcMD2Am1HPp8n
+      mUyiaRrnzp0jk8lw/vx5hoaGaG5uxrIsKisree655/a7VHGAHJoABIPBTbtQAZ5//vm17y9f
+      vryXJYkScGgC8FH/OP/yn392vPzb//y31FeFdrEiUQoOTQAKRZtsbsXx8srl7lpxOMkWofA0
+      CYDwNAmA8DQJgPA0CYDwNAmA8DQJgPA0CQCrxwSuX7+OZVncuHGDvr4+7t+/z7Vr1ygWixQK
+      Ba5du0Y8Ht/vUsUOcxyA4kqOm739KKUYuT/I9Mw8k6MPGBh8UPJnhi4UCmSzWSzLYmJiAoDx
+      8XEWFhYwTZP+/n4WFxfJ5533KojS4PhIsO4LUF0Vwi4sE5tZJIyfgG5Q71eYShHcgQtkuD3d
+      if3w1flpxhaL6+vVNI2KigoKhQJXrlzh5s2b2LZNXV0dmUwGXdfp6uri3r17NDc3u1qPONgc
+      B6CQN5mJxairq6eiws+KZQEFlixF42ONKdu5QIbbqcq6YTz1WMNYX69pmmSzWaamptB1nbNn
+      zxIMBonFYgQCAbq6uhgYGODSpUtyMY9DxvH/pi8Q4vKly+iGQbiuFjQdDYWtwKC0L5ARCoW2
+      nEn6+Ku9TKM+nBwHQNN1AoHApvsPw1b0/3xxl3/900eOl//3N/6RymBwFysSe0XezwFb2Vgu
+      mutVSb/ficcdhhdwIZ6aBGCb8vk8v/vd78jn87zzzjt8/vnnJJNJfvvb36KUYnh4mPfee4+B
+      gYH9LlVsQQKwTcFgkDNnzqCUor29neHhYd59912UUiwvL7OwsMD3v/99FhcX97tUsQXZBtim
+      TCbDgwcPqKiowLIsqqurefnll+nr68OyLFpbW7l69Spnz57d71LFFiQA21RRUcEbb7yx6f6L
+      Fy+ufd/W1val4+fm5ohEIty9exfDMOjs7CSZTNLQ0ECxWOTWrVtcuHABwzB2pX6vk49A22Sn
+      shTH5xz/e7wXOZfL8Yc//AHbtunp6aG2tpbh4WFu3boFwCeffEI4HKanp2e/frxDT94Btkkt
+      ZbFHZx0vr7c1gLF6NruysjJOnDgBwJtvvsnVq1d5+eWXiUajAFRWVjI6OirXRNhFEoB9lE6n
+      SSQSDA0NMTs7S1tbG3fu3CGZTBKLxWhsbGRhYUHmH+0iCcA+qqqq4sc//jHAhtNOPr7B3Nra
+      uud1eYkEYB9FH/wXU4P/4XBpjYt/92+7Wo8XSQD2kZmeZiH66X6X4WnOG2Iskxuf3QJlc6f/
+      FlMzccZH7nPniyGZGSNKlvOGGH8ZddUVKKUwfAaZ5TR+zUc4UPoNMe7Hrq9XPcVYlP1wve5e
+      Oh6tU+wcxwFYyWWYnJykqroGnxEgY+ZQeoFkHpo0Da2EG2Lcj11fb1HXcRMBwzDQDP3het1d
+      EESacXae49+ov6yCb7/07dUbjY0bHtMo7YYY4V3OG2LcXsBL7CrTNPn973/Pr3/9a27dusXk
+      5CSaphGJRLh8+TKTk5PcuHGD48eP841vfGO/yz2wZCpEiQqFQnR3d7O8vExPTw+xWIzjx48z
+      MjJCoVCgra2NSCTChQsX9rvUA00CUKKWlpYYGxtjZmaG3/zmN1y+fBnTNKmpqSGZTGJZFg0N
+      DVu+cyuliMViwGo/QzQaRSnF+Pj4pscPO9mqKlE1NTW8+eaba7fPnTu3aZkzZ85sOTabzfL+
+      ++/z85//nJ6eHpRSJBIJBgYG6OjoYH5+no8//phXXnlly/FKKTRNW5vY9+jr45eshdL42CwB
+      KFXRaZhx+Cqt63B+fTugoqKCjo4OFhcXiUajLC8vMzc3x+zsLLlcjkgkQiQS2fKpUqkU77zz
+      Dm+99RY9PT1kMhnC4TBDQ0O8+uqrFItF3n77bX75y19SVXVQriH65SQApSoWg/5bzpY1jA0B
+      SCaTLC0tkUwmee2115iamqK9vZ2xsbG1LralpSVisRgtLS0bnqq6uprOzk7i8Tj9/f2EQiFO
+      nTq19mr//vvvAzAzMyMBEAdTXV0dP/rRj9Zut7e3A3Ds2LG1+44cObLl2IWFBcbHxzl27Bi/
+      +tWvGBwcJBaLUV1dzdzcHD/4wQ/o7Oz80vEHjQTAgwbnsowmco6W9Rsa3+lc70cIh8P84he/
+      WLv9zDPPbBpz6tSp7Re5RyQAHrScLzK37OyKmkFj44bs/fgc0ZSzBv+gz8eljuOu69tLEgDh
+      yshCnN7pCUfLVgXLDnwA5DiA8DQJgPA0VwF4NG1YKYVt26inmP4sxEHieBugaJlc+/QWf/3i
+      ZWITw8SWilQYebIWnLvwrLyViJLkOABGIERrUwOFXJqhsShK91HX2kJNmSIvDTGuxu5EQ4yu
+      bMcvOgooPjbWVs5rVk+s9/HzGn3lWKUOfBOP4wBYZprEQoKq2gb++sqLTEdnKVrLJPLQrGmr
+      h9uRhhgnY3ekIUZzXrP2xFh9G2PdzO/RNO3AN/E4ri4QquLSpUtrt48c2XiIXBpiRCmSj+5i
+      zyilmJiYoFgscuPGDebm5hgYGKC3txdYPdHw9evX9/RjkwRA7JlUKrU2/frYsWP09vbS29tL
+      XV0dSimy2Sy1tbWMjo7uWU0SALFnampqaG5uRtd14vE4fr+fn/3sZwwODmLbNtlsllQqxcmT
+      J/esJgmA2DPxeJxUKsX9+/eZn5/nyJEj9Pb20tTURCKRYGlpaS0EWykUCiilME2TYrFIPp/H
+      sqy1x0zTdLWXCmQukNhDkUiEH/7whwB8/etf3/LxL5NIJHjvvfd49dVX6evrI5VKEYlEGBkZ
+      4ac//SnRaJT+/n7Onz/P0aNHHdckARB7Z+z/YH7Q2bLBGjj72trN+vp6Ojo6KCsrA1ZPLV9V
+      VbXWmllfX49pmlteyvcvkQCIvWMmIR11tmxhY7/CzMwMk5OTDA4OYpomFRUVzMzMUFNTQzwe
+      Z3FxkZqaGtclSQBESWhubl67FNXp06c3Pd7U1LTlx6qvIgEQJWGyb4SlaMLRsmXVIU6+uPUZ
+      MZ4kARAlYfbeFNOfjzlatrq51nEAZDeo8DQJgPA0xwFQShGfn0cpxdT4CPFEiuWlBWJzC7tZ
+      nxC7yvE2gL2SY3hsgoZwmJq6esYmpgj6ffhQWJF6fI9Ok+eyAMX6HHPXM0qVWj/y5/IIIOqx
+      9bodqh6fF+/+J37an3fjUU6F04nJanXwxtsuxro9uvr46CfHPm3Nbot+cr2WZREIBMhkMgSD
+      QbLZLLquu2uIqa+pBCCfy4GmoesGPtTaL2n1n7sGEfWwkQZwPdZ+2Jr56Ht3Y+0NLZ5ubKzZ
+      5XptBTzt2PXfj6ac/zE9OXY7693OWH0763WRAPXE2Pn5ea5evcpPfvITBgYGSCaTtLa2cufO
+      HXcNMblcjpm5ONmlFLX1YcqNIuk8BDUNpevYtu2q2QJWm1EMw1j9fjtj3TbTbBjrrjFFN9bH
+      FjXd1YuTruvrDTEuTx77aJ0AuGlMeWKsm/U+OdbdCW+1HavZXSPOxrFNTU20t7dTXl5ONpvl
+      woULFAoFvvnNb7priHn27LMPn3H9CjFhx2UJsT+i0ShTU1P09fWRTqdJp9Pk83m6urrkOIA4
+      /FpbW3n99dcBNl0tRwIgDr2heJakuXWXmQRAHHpTSxaTi/ktH5MDYcLTJADC0yQAwtMkAMLT
+      JADC0yQAwtMkAMLTJADC0yQAwtOc9wMUV7jzxX3OnjnN6PB98FcQ0gukLeg8cWwXSxRi97ia
+      CuH3G4BGa0sLY9NzKMOgApucUgTkAhmOx3r1Ahm6Us5rVhtrVi5+V0o5r9lxAJSCnJkla2YY
+      /OI+nae7iE6OkS9Ck6atzceXC2R89VjPXiDD5Zz+Det18bvaNPYvrNd5AOwiLc0trBRsjrYd
+      YWVlheNfO0ausPokcoEMUYocB8AXKKO5uXn1RnX12v3uzsQoxMEie4GEp0kAhKdJAISnSQCE
+      p20ZALuQ48NrPczNzu11PULsqS0DkFuY4N54jM/6+va6HiH21Ja7Qf0VdVw89wyGIXv3xeG2
+      9UegYoHxiXGmY7N7XY8Qe2rTO4BSivGpGBVBjVBV9VZjhDg0tvwI1FhfzYIVovuE88tNClGK
+      Nn0E0jQNw1/Gg4Fb/Ll/YD9qEmLPbAqAUjYf99ygLtLM3/zVC/tRkxB7ZvNGsIJ0KsnM5DD/
+      /cHHa3cXLZOPr3+KUoqh/k+YSa0wfO8ufbfvupoOLMRBsmkbQNN1/uH1tzYtaARCNIZr0TSN
+      I63NJG0bzVdOk2+1ISYoDTGOx0pDjJOxe9MQ8/+tlOBqv/i2kQAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
